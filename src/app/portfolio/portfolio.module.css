@@ -1,0 +1,58 @@
+/* Parallax Section Styles */
+.parallaxSection {
+  height: 50vh; /* Full viewport height */
+  background-attachment: fixed; /* Fixed position for parallax effect */
+  background-size: cover; /* Cover entire section */
+  background-position: center; /* Center the background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Background Images for Parallax Sections */
+.parallaxIntakahve {
+  background-image: url('/pictures/portfolio/intakahve/cover.png'); /* Replace with your image path */
+}
+
+.parallaxWow {
+  background-image: url('/pictures/portfolio/wow/cover.png'); /* Replace with your image path */
+}
+.parallaxJDT {
+  background-image: url('/pictures/portfolio/jdt/cover.png'); /* Replace with your image path */
+}
+.parallaxTrima {
+  background-image: url('/pictures/portfolio/trima/cover.png'); /* Replace with your image path */
+}
+.parallaxMusprep {
+  background-image: url('/pictures/portfolio/musprep/cover.png'); /* Replace with your image path */
+}
+
+/* Content Section Styles */
+.contentSection {
+  padding: 50px;
+  text-align: center;
+  background-color: #f4f4f4;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Parallax Text Styling */
+.parallaxText {
+  margin: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  border-radius: 10px;
+}
+
+
+.levitate {
+  transition: all 0.3s ease-in-out;
+}
+
+.levitate:hover {
+  transform: translateY(-5px);
+}

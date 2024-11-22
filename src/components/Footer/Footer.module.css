@@ -1,0 +1,9 @@
+.footerNav {
+  list-style: none;
+}
+
+.footerNav li {
+  color: #2b2b2b;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
