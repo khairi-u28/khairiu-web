@@ -47,7 +47,7 @@ const works = [
     pic: "wow",
     year: "2024",
     country: "Indonesia",
-    company: "WOW Toko Daging Halal",
+    company: "WOW Halal Meat Shop",
     wd: false,
     gd: true,
   },
@@ -63,7 +63,10 @@ export default function Home() {
       >
         {/* row 1 */}
         <div className="col-12 flex flex-column md:flex-row justify-content-between align-items-center mb-0 -mt-8 md:mt-0">
-          <h1 className="font text-6xl md:text-7xl my-2" style={{ color: "#47585C" }}>
+          <h1
+            className="font text-4xl md:text-7xl my-2"
+            style={{ color: "#47585C" }}
+          >
             Hi,
           </h1>
           <Image
@@ -76,7 +79,7 @@ export default function Home() {
         </div>
         {/* row 2 */}
         <div className="col-12 flex flex-column md:flex-row justify-content-between align-items-center my-0">
-          <h1 className="font text-6xl md:text-8xl my-2">
+          <h1 className="font text-4xl md:text-7xl my-2">
             {`It's me `}
             <span style={{ color: "#cf8291" }}>Khairi</span>
           </h1>
@@ -91,9 +94,9 @@ export default function Home() {
         {/* row 3 */}
         <div className="col-12 flex flex-column md:flex-row justify-content-between align-items-center my-0">
           <div className={styles.animated}>
-            <h1 className="font text-6xl md:text-7xl mt-2 mb-4 block md:flex text-center md:text-left gap-3">
+            <h1 className="font text-4xl md:text-7xl mt-2 mb-4 block md:flex text-center md:text-left gap-3">
               <p className="m-0">{`I'm a`}</p>
-              <span className="text-5xl md:text-7xl"></span>
+              <span className="text-4xl md:text-7xl"></span>
             </h1>
           </div>
           <Image
@@ -134,9 +137,9 @@ export default function Home() {
           </div>
           {/* text */}
           <div className={`${styles.greetings} col-12 md:col-5`}>
-            <h1 className="my-3">Greetings!</h1>
-            <p>{`Hi, Name's Khairi`}</p>
-            <p>
+            <h2 className="my-3">Greetings!</h2>
+            <p className="text-xs md:text-sm">{`Hi, Name's Khairi`}</p>
+            <p className="text-xs md:text-sm">
               An Experienced{" "}
               <span style={{ color: "#4D80E6", fontWeight: "bold" }}>
                 Web Developer
@@ -149,7 +152,7 @@ export default function Home() {
               experience in web development and graphic design, I specialize in
               frontend web development and UI/UX design for website interfaces.
             </p>
-            <p>
+            <p className="text-xs md:text-sm">
               As a{" "}
               <span style={{ color: "#4D80E6", fontWeight: "bold" }}>
                 Web Developer
@@ -157,14 +160,14 @@ export default function Home() {
               ,{" "}
               {`I've spent two years freelancing and two years in a professional capacity, focusing on creating visually appealing and user-friendly websites.`}
             </p>
-            <p>
+            <p className="text-xs md:text-sm">
               and as a{" "}
               <span style={{ color: "#cf8291", fontWeight: "bold" }}>
                 Graphic Designer,
               </span>{" "}
               {`I've contributed to numerous projects from research to development process, in form of brand identity and user interface`}
             </p>
-            <p>
+            <p className="text-xs md:text-sm">
               {`Beyond my professional endeavors, I'm passionate about Japanese culture, which serves as a constant source of inspiration in my work. This passion drives me to continually enhance my design skills, particularly in user experience design. I'm excited to bring my experience and enthusiasm to projects that resonate with global audiences.`}
             </p>
           </div>
@@ -174,10 +177,10 @@ export default function Home() {
       <div className="featuredWorks flex pt-5 pb-0">
         <div className="col-12 md:col-10 px-0 mx-auto flex flex-wrap justify-content-between">
           {/* ~ sub-title */}
-          <div className="subtitle col-12 md:col-4 flex flex-column px-2">
-            <h2 className="text-5xl">Featured Works</h2>
+          <div className="subtitle col-12 md:col-4 flex flex-column px-2 px-4 md:px-0 mb-4">
+            <h2 className="text-5xl md:my-4 my-2">Featured Works</h2>
             <p
-              className="my-0 line-height-3 md:line-height-4"
+              className="my-0 line-height-3 md:line-height-4 text-xs md:text-sm"
               style={{
                 color: "#2B2B2B",
                 letterSpacing: ".5px",
@@ -276,20 +279,26 @@ export default function Home() {
           </div>
           {/* ~ cards MOBILE */}
           <div className={`flex md:hidden overflow-x-auto col-12 p-0 gap-3`}>
-            <div className={`${styles.workScroll} flex md:hidden col-12 p-2 gap-3`}>
+            <div
+              className={`${styles.workScroll} flex md:hidden col-12 p-2 gap-3`}
+            >
               {/* card 1 */}
               {works.map((work) => {
                 return (
                   <div
                     key={work.title}
                     className={`${styles.levitate} flex col-12 p-0`}
-                    style={{ color: "#2b2b2b", textDecoration: "none", backgroundColor:"white" }}
+                    style={{
+                      color: "#2b2b2b",
+                      textDecoration: "none",
+                      backgroundColor: "white",
+                    }}
                   >
                     <div
-                      className="card flex flex-1 flex-column"       
+                      className="card flex flex-1 flex-column"
                       style={{
                         border: "1px solid #e8e8e8",
-                      }}             
+                      }}
                     >
                       {/* card / pic */}
                       <div
@@ -353,7 +362,7 @@ export default function Home() {
                           <Link href={`/portfolio/${work.pic}`}>
                             <i
                               className="pi pi-arrow-right"
-                              style={{ fontSize: "1.5rem",color: "#4D80E6" }}
+                              style={{ fontSize: "1.5rem", color: "#4D80E6" }}
                             ></i>
                           </Link>
                         </div>
@@ -369,19 +378,28 @@ export default function Home() {
       {/* CAREER JOURNEY */}
       <div
         className="careerJourney flex py-4 -mt-8"
-        style={{ backgroundColor: "#dde8ff" }}
+        style={{ backgroundColor: "#E6EEFF" }}
       >
         <div className="flex flex-column col-12 md:col-10 px-0 py-8 mx-auto">
           <div className="px-4 md:px-0">
-            <h2 className="text-5xl my-2">Career Journey</h2>
+            <h2 className="text-5xl md:my-4 my-2">Career Journey</h2>
             <p
-              className="my-1 line-height-3"
+              className="my-1 line-height-3 text-xs md:text-sm"
               style={{
                 color: "#2B2B2B",
                 letterSpacing: ".8px",
               }}
             >
-              {`My journey as a Web Developer and Graphic Designer has been fueled by a passion for innovation and creativity. With 4 years of experience, I've honed my skills in Web Development and Design and have successfully delivered a wide range of projects, from simple landing pages to complex web applications, from creating logo to creating a whole set of brand identity`}
+              {`My journey as a Web Developer and Graphic Designer has been fueled by a passion for innovation and creativity.`}
+            </p>
+            <p
+              className="my-1 line-height-3 text-xs md:text-sm"
+              style={{
+                color: "#2B2B2B",
+                letterSpacing: ".8px",
+              }}
+            >
+              {`With 4 years of experience, I've honed my skills in Web Development and Design and have successfully delivered a wide range of projects, from simple landing pages to complex web applications, from creating logo to creating a whole set of brand identity`}
             </p>
           </div>
           {/* ~ card DESKTOP */}
@@ -467,7 +485,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="body flex">
-                <small className="line-height-3">{`Having started my career as an intern, I was immersed in the intricacies of the Japanese travel industry. This experience provided me with a solid foundation in understanding the specific needs and preferences of travelers. From designing captivating landing pages to developing comprehensive client and admin portals, I've actively contributed to the creation of robust travel agency websites.`}</small>
+                <small className="line-height-3 text-xs md:text-sm">{`Having started my career as an intern, I was immersed in the intricacies of the Japanese travel industry. This experience provided me with a solid foundation in understanding the specific needs and preferences of travelers. From designing captivating landing pages to developing comprehensive client and admin portals, I've actively contributed to the creation of robust travel agency websites.`}</small>
               </div>
             </div>
             {/* Career card 2 */}
@@ -494,7 +512,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="body flex">
-                <small className="line-height-3">{`In 2022, I transitioned to a specialized role within the company, focusing on the South Korean travel market. In this role, I expanded my responsibilities to include a wider range of creative tasks, such as designing logos, business cards, and promotional materials. This experience allowed me to further develop my design skills and contribute to the overall branding and marketing efforts of the company.`}</small>
+                <small className="line-height-3 text-xs md:text-sm">{`I transitioned to a specialized role within the company, focusing on the South Korean travel market. In this role, I expanded my responsibilities to include a wider range of creative tasks, such as designing logos, business cards, and promotional materials. This experience allowed me to further develop my design skills and contribute to the overall branding and marketing efforts of the company.`}</small>
               </div>
             </div>
           </div>
@@ -508,12 +526,12 @@ export default function Home() {
             >
               <Button
                 label="Khairi's CV & Resume"
-                icon="pi pi-info-circle"
+                icon="pi pi-file"
                 raised
                 className="border-none py-3 px-4 border-noround"
                 style={{
                   backgroundColor: "#4D80E6",
-                  boxShadow: "0px 24px 64px 0px rgba(0,0,0,0.15)",
+                  boxShadow: "0px 16px 56px 0px rgba(0,0,0,0.29)",
                 }}
               />
             </Link>
@@ -542,7 +560,10 @@ export default function Home() {
             </p>
           </div>
           <div className="col-12 md:col-3 flex justify-content-center align-items-center align-self-center gap-4">
-            <Link href={"https://www.linkedin.com/in/khairi-u28/"} target="_blank">
+            <Link
+              href={"https://www.linkedin.com/in/khairi-u28/"}
+              target="_blank"
+            >
               <Button
                 icon="pi pi-linkedin"
                 aria-label="Filter"
@@ -557,7 +578,10 @@ export default function Home() {
                 }}
               />
             </Link>
-            <Link href={"https://www.instagram.com/kare_to_katsu/"} target="_blank">
+            <Link
+              href={"https://www.instagram.com/kare_to_katsu/"}
+              target="_blank"
+            >
               <Button
                 icon="pi pi-instagram"
                 aria-label="Filter"

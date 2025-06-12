@@ -23,6 +23,12 @@
   animation: cursor .8s infinite, typing 20s steps(16) infinite;
 }
 
+@media (max-width: 768px) {
+  .animated span::after {
+    height: 44px;
+  }
+}
+
 @keyframes cursor {
   to {
     border-left: 2px solid #4D80E600;
@@ -108,9 +114,9 @@
   transform: translateY(-5px);
 }
 
-.workScroll {
-  /* animation: scroll 5s linear infinite; */
-}
+/* .workScroll {
+  animation: scroll 5s linear infinite;
+} */
 
 @keyframes scroll {
   100% {
